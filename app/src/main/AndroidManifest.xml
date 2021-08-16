@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntelligentNavigationCane">
+        <activity android:name=".YBF.Test_2"></activity>
+        <activity android:name=".LXY.Test_1" />
+        <activity android:name=".GHJ.Test_0" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
