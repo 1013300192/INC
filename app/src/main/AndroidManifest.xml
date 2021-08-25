@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntelligentNavigationCane">
-        <activity android:name=".YBF.Personal_Information"></activity>
+        <activity android:name=".YBF.Map"></activity>
+        <activity android:name=".YBF.Personal_Information" />
         <activity android:name=".GHJ.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +27,7 @@
         <activity android:name=".GHJ.Thefirst_Activity" />
         <activity android:name=".YBF.Test_2" />
         <activity android:name=".LXY.Test_1" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
