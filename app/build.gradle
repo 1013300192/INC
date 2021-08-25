@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.intelligentnavigationcane"
+            applicationId "com.example.intelligentnavigationcane"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -26,6 +26,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    sourceSets{
+        main{
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
 }
 
 dependencies {
@@ -36,4 +43,14 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    compile fileTree(dir:  'libs' , include: ['*.jar'])
+    androidTestCompile ('com.android.support.test.espresso: espresso-core: 2.2.2', {
+        exclude group: 'com.android.support',  module: 'support-annotations'
+    })
+    compile 'com.android.support: appcompat-v7:25.1.0'
+    testCompile 'junit: junit: 4.12'
+
+    compile files('libs/BaiduLBS_Android.jar')
+
 }
