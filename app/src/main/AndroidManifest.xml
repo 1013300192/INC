@@ -14,19 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntelligentNavigationCane">
-        <activity android:name=".YBF.Personal_Information"></activity>
-        <activity android:name=".GHJ.LoginActivity">
+        <activity android:name=".YBF.Personal_Information" />
+        <activity android:name=".GHJ.Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GHJ.RegisterActivity" />
-        <activity android:name=".GHJ.Thefirst_Activity" />
+        <activity android:name=".GHJ.Login.RegisterActivity" />
+        <activity android:name=".GHJ.The_First.MainActivity" />
         <activity android:name=".YBF.Test_2" />
         <activity android:name=".LXY.Test_1" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

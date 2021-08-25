@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GHJ.The_First.Bottom_Activity">
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:text="首页"
+        android:background="@drawable/btn_background111"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:text="导航"
+        android:background="@drawable/btn_background111"
+        android:textColor="@color/black"/>
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:background="@drawable/btn_background111"
+        android:textColor="@color/black"
+        android:text="数据"/>
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:background="@drawable/btn_background111"
+        android:text="个人"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.intelligentnavigationcane.GHJ;
+package com.example.intelligentnavigationcane.GHJ.Login;
 
 public class User {
         private  int id;

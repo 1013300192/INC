@@ -1,4 +1,4 @@
-package com.example.intelligentnavigationcane.GHJ;
+package com.example.intelligentnavigationcane.GHJ.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
+import com.example.intelligentnavigationcane.GHJ.The_First.MainActivity;
 import com.example.intelligentnavigationcane.R;
 
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                     if (userdata) {
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, Thefirst_Activity.class);
+                        Intent intent = new Intent(LoginActivity.this,  MainActivity.class);
                         intent.putExtra("username", name);
                         intent.putExtra("password", password);  //展示账号密码功能
                         startActivity(intent);

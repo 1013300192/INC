@@ -1,4 +1,4 @@
-package com.example.intelligentnavigationcane.GHJ;
+package com.example.intelligentnavigationcane.GHJ.Login;
 
 import android.content.Context;
 import android.database.Cursor;
