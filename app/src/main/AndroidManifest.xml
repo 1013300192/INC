@@ -7,6 +7,21 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/manage"
@@ -14,16 +29,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntelligentNavigationCane">
+
+        <!--声明service组件，每个App拥有自己单独的定位service-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+        <!--完成AK申请-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DC9yE1eoyjDLnFK5ssxMcVgy392OjY08" >
+        </meta-data>
+
         <activity android:name=".YBF.Personal_Information"></activity>
-        <activity android:name=".GHJ.LoginActivity">
+        <activity android:name=".GHJ.Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GHJ.RegisterActivity" />
-        <activity android:name=".GHJ.Thefirst_Activity" />
+        <activity android:name=".GHJ.Login.RegisterActivity" />
+        <activity android:name=".GHJ.The_First.MainActivity" />
         <activity android:name=".YBF.Test_2" />
         <activity android:name=".LXY.Test_1" />
         <activity android:name=".MainActivity"></activity>
