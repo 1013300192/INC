@@ -11,15 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.intelligentnavigationcane.R;
 
-import java.util.zip.Inflater;
-
-public class Map extends Fragment {
+public class Map_Top extends Fragment {
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.activity_map,container,false);
+    public View onCreateView(@NonNull  LayoutInflater inflater, @Nullable ViewGroup container, @Nullable  Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_map_top,container,false);
         return view;
     }
 }
-
 

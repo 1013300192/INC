@@ -49,9 +49,7 @@
         </activity>
         <activity android:name=".GHJ.Login.RegisterActivity" />
         <activity android:name=".GHJ.The_First.MainActivity" />
-        <activity android:name=".YBF.Test_2" />
         <activity android:name=".LXY.Test_1" />
-        <activity android:name=".MainActivity"/>
         <activity android:name=".YBF.Map"/>
     </application>
 
