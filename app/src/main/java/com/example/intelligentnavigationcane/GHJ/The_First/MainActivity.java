@@ -1,5 +1,6 @@
 package com.example.intelligentnavigationcane.GHJ.The_First;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.intelligentnavigationcane.R;
+import com.example.intelligentnavigationcane.YBF.Map;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         mBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, Map.class);
+                startActivity(intent);
             }
         });
         mBtn3.setOnClickListener(new View.OnClickListener() {
