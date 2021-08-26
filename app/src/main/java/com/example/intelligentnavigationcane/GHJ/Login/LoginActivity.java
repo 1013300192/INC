@@ -11,7 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intelligentnavigationcane.GHJ.The_First.MainActivity;
+import com.example.intelligentnavigationcane.LXY.Test_1;
 import com.example.intelligentnavigationcane.R;
+import com.example.intelligentnavigationcane.YBF.Personal_Information;
 
 import java.util.ArrayList;
 
@@ -34,6 +36,15 @@ public class LoginActivity extends AppCompatActivity {
         login=findViewById(R.id.btn_login);
         username=findViewById(R.id.edit_name);
         userpassword=findViewById(R.id.edit_pass);
+
+        Button button = findViewById(R.id.test);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, Test_1.class);
+                startActivity(intent);
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
