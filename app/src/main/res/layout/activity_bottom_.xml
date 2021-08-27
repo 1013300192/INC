@@ -15,6 +15,7 @@
         android:text="首页"
         android:background="@drawable/btn_background111"
         android:textColor="@color/black"
+        android:layout_gravity="bottom"
         />
     <Button
         android:id="@+id/btn_2"
@@ -24,7 +25,8 @@
         android:textSize="20sp"
         android:text="导航"
         android:background="@drawable/btn_background111"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_gravity="bottom"/>
     <Button
         android:id="@+id/btn_3"
         android:layout_width="0dp"
@@ -33,7 +35,8 @@
         android:textSize="20sp"
         android:background="@drawable/btn_background111"
         android:textColor="@color/black"
-        android:text="数据"/>
+        android:text="数据"
+        android:layout_gravity="bottom"/>
     <Button
         android:id="@+id/btn_4"
         android:layout_width="0dp"
@@ -42,7 +45,8 @@
         android:textSize="20sp"
         android:background="@drawable/btn_background111"
         android:text="个人"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_gravity="bottom"/>
 
 
 </LinearLayout>
