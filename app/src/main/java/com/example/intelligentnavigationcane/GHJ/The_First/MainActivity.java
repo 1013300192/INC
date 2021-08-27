@@ -69,56 +69,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /**
-        *    报错空指针异常
-         CardView card_0 = findViewById(R.id.hello);
-        card_0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is Hello!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        CardView card_1 = findViewById(R.id.card_1);
-        card_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is card_1!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        CardView card_2 = findViewById(R.id.card_2);
-        card_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is card_2!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        CardView card_3 = findViewById(R.id.card_3);
-        card_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is card_3!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        CardView card_4 = findViewById(R.id.card_4);
-        card_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is card_4!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        CardView card_5 = findViewById(R.id.card_5);
-        card_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is card_5!",Toast.LENGTH_SHORT).show();
-            }
-        });CardView card_6 = findViewById(R.id.card_6);
-        card_6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"This is card_6!",Toast.LENGTH_SHORT).show();
-            }
-        });*/
     }
     /**@Override
     protected void onResume() {
