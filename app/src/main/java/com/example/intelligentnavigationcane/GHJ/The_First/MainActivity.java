@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!fragment.isAdded()){
             transaction
                     .hide(currentFragment)
-                    .add(R.id.top_frame_layout,fragment);
+                    .replace(R.id.top_frame_layout,fragment);
         }else{
             transaction
                     .hide(currentFragment)
