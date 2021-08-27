@@ -48,7 +48,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/ic_launcher_background" />
+                android:background="@drawable/example_head" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -72,7 +72,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/head"
                 android:layout_marginStart="10dp"/>
 
             <TextView
@@ -105,7 +105,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/nickname"
                 android:layout_marginStart="10dp"/>
 
             <TextView
@@ -138,7 +138,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/phone"
                 android:layout_marginStart="10dp"/>
 
             <TextView
@@ -171,7 +171,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/change_password"
                 android:layout_marginStart="10dp"/>
 
             <TextView
@@ -204,7 +204,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/help"
                 android:layout_marginStart="10dp"/>
 
             <TextView
@@ -238,7 +238,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/about"
                 android:layout_marginStart="10dp"/>
 
             <TextView
