@@ -69,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /** CardView card_0 = findViewById(R.id.hello);
+       /**
+        *    报错空指针异常
+         CardView card_0 = findViewById(R.id.hello);
         card_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
