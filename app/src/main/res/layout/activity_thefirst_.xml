@@ -10,7 +10,7 @@
         android:id="@+id/top_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="11">
+        android:layout_weight="29">
         <fragment
             android:id="@+id/top_fragment"
             android:name="com.example.intelligentnavigationcane.GHJ.The_First.ShouYe_Activity"
@@ -22,7 +22,7 @@
         android:id="@+id/bottom_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:name="com.example.intelligentnavigationcane.GHJ.The_First.Bottom_Activity"/>
 
 </LinearLayout>

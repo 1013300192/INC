@@ -1,75 +1,89 @@
 package com.example.intelligentnavigationcane.GHJ.The_First;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
 
 import com.baidu.mapapi.map.MapView;
 import com.example.intelligentnavigationcane.LXY.Test_1;
 import com.example.intelligentnavigationcane.R;
 import com.example.intelligentnavigationcane.YBF.Map;
 
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-public class MainActivity extends AppCompatActivity {
-    private Button mBtn1,mBtn2,mBtn3,mBtn4;
-    private MapView mMapView = null;
+    int checked = 0;
+    private Fragment currentFragment = new Fragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thefirst_);
-        mBtn1=findViewById(R.id.btn_1);
-        mBtn2=findViewById(R.id.btn_2);
-        mBtn3=findViewById(R.id.btn_3);
-        mBtn4=findViewById(R.id.btn_4);
-        //获取地图控件引用
-        mMapView = (MapView) findViewById(R.id.bmapView);
-        mBtn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager=getSupportFragmentManager();
-                FragmentTransaction transaction=fragmentManager.beginTransaction();
-                transaction.replace(R.id.top_frame_layout,new ShouYe_Activity());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-        mBtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager=getSupportFragmentManager();
-                FragmentTransaction transaction=fragmentManager.beginTransaction();
-                transaction.replace(R.id.top_frame_layout,new Map());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-        mBtn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
-        mBtn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager=getSupportFragmentManager();
-                FragmentTransaction transaction=fragmentManager.beginTransaction();
-                transaction.replace(R.id.top_frame_layout,new Test_1());
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
+        MapView mMapView = findViewById(R.id.bmapView);
+
+        RadioButton btn1 = findViewById(R.id.btn_1);
+        btn1.setOnClickListener(this);
+        RadioButton btn2 = findViewById(R.id.btn_2);
+        btn2.setOnClickListener(this);
+        RadioButton btn3 = findViewById(R.id.btn_3);
+        btn3.setOnClickListener(this);
+        RadioButton btn4 = findViewById(R.id.btn_4);
+        btn4.setOnClickListener(this);
+    }
+    @Override
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.btn_1:
+                if (checked!=1)
+                    replaceFragment(new ShouYe_Activity());
+                checked=1;
+                break;
+            case R.id.btn_2:
+                if (checked!=2)
+                    replaceFragment(new Map());
+                checked=2;
+                break;
+            case R.id.btn_3:
+                if (checked!=3)
+                    replaceFragment(new Test_1());
+                checked=3;
+                break;
+            case R.id.btn_4:
+                if (checked!=4)
+                    replaceFragment(new Test_1());
+                checked=4;
+                break;
+            default:
+                break;
+        }
+    }
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        if(!fragment.isAdded()){
+            transaction
+                    .hide(currentFragment)
+                    .add(R.id.top_frame_layout,fragment);
+        }else{
+            transaction
+                    .hide(currentFragment)
+                    .show(fragment);
+        }
+
+        //全局变量，记录当前显示的fragment
+        currentFragment = fragment;
+        transaction.addToBackStack(null);
+        transaction.commit();
 
     }
+
     /**@Override
     protected void onResume() {
         super.onResume();
