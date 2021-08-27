@@ -43,14 +43,11 @@
         <activity android:name=".GHJ.Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".GHJ.Login.RegisterActivity" />
         <activity android:name=".GHJ.The_First.MainActivity" />
-        <activity android:name=".LXY.Test_1" />
-        <activity android:name=".YBF.Map"/>
     </application>
 
 

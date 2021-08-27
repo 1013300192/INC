@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.baidu.mapapi.map.MapView;
+import com.example.intelligentnavigationcane.LXY.Test_1;
 import com.example.intelligentnavigationcane.R;
 import com.example.intelligentnavigationcane.YBF.Map;
 
@@ -58,9 +61,62 @@ public class MainActivity extends AppCompatActivity {
         mBtn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                FragmentTransaction transaction=fragmentManager.beginTransaction();
+                transaction.replace(R.id.top_frame_layout,new Test_1());
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
+
+       /** CardView card_0 = findViewById(R.id.hello);
+        card_0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is Hello!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        CardView card_1 = findViewById(R.id.card_1);
+        card_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is card_1!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        CardView card_2 = findViewById(R.id.card_2);
+        card_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is card_2!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        CardView card_3 = findViewById(R.id.card_3);
+        card_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is card_3!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        CardView card_4 = findViewById(R.id.card_4);
+        card_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is card_4!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        CardView card_5 = findViewById(R.id.card_5);
+        card_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is card_5!",Toast.LENGTH_SHORT).show();
+            }
+        });CardView card_6 = findViewById(R.id.card_6);
+        card_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"This is card_6!",Toast.LENGTH_SHORT).show();
+            }
+        });*/
     }
     /**@Override
     protected void onResume() {
