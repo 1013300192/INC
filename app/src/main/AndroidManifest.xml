@@ -4,7 +4,7 @@
     <!-- 获取网络权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- 这个权限用于进行网络定位-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -39,15 +39,15 @@
             android:value="DC9yE1eoyjDLnFK5ssxMcVgy392OjY08" >
         </meta-data>
 
-        <activity android:name=".YBF.Personal_Information"/>
-        <activity android:name=".GHJ.Login.LoginActivity">
+        <activity android:name=".GHJ.Test_Login.Main_LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GHJ.Login.RegisterActivity" />
-        <activity android:name=".GHJ.The_First.MainActivity" />
+        <activity android:name=".GHJ.Test_Login.RegisterActivity"/>
+        <activity android:name=".GHJ.The_First.MainActivity"/>
+
     </application>
 
 

@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.RadioButton;
 
 import com.baidu.mapapi.map.MapView;
-import com.example.intelligentnavigationcane.LXY.Test_1;
+
 import com.example.intelligentnavigationcane.R;
-import com.example.intelligentnavigationcane.YBF.Map;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
