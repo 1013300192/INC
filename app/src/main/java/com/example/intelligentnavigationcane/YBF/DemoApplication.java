@@ -1,6 +1,7 @@
 package com.example.intelligentnavigationcane.YBF;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
