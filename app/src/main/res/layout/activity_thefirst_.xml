@@ -11,11 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="29">
-        <fragment
-            android:id="@+id/top_fragment"
-            android:name="com.example.intelligentnavigationcane.GHJ.The_First.ShouYe_Activity"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </FrameLayout>
 
     <fragment

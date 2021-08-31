@@ -1,5 +1,6 @@
-package com.example.intelligentnavigationcane.LXY;
+package com.example.intelligentnavigationcane.GHJ.The_First;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,33 +12,36 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.intelligentnavigationcane.LXY.Test;
 import com.example.intelligentnavigationcane.R;
 
-public class Test_1 extends Fragment {
+public class User extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull  LayoutInflater inflater, @Nullable ViewGroup container, @Nullable  Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_test1,container,false);
+        View view = inflater.inflate(R.layout.activity_user,container,false);
 
         CardView card_0 = view.findViewById(R.id.hello);
         card_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"This is Hello!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"安全出行，为您护航!", Toast.LENGTH_SHORT).show();
             }
         });
         CardView card_1 = view.findViewById(R.id.card_1);
         card_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"This is card_1!",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), Test.class);
+                startActivity(intent);
             }
         });
         CardView card_2 = view.findViewById(R.id.card_2);
         card_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"This is card_2!",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), Test.class);
+                startActivity(intent);
             }
         });
         CardView card_3 = view.findViewById(R.id.card_3);
