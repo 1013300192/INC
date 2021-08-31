@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_2:
                 if (checked!=2)
-                    replaceFragment(new Map());
+                    replaceFragment(new Map_Bottom());
                 checked=2;
                 break;
             case R.id.btn_3:

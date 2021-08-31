@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,7 +24,13 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 import com.example.intelligentnavigationcane.R;
 
+import static com.baidu.mapapi.map.BaiduMap.MAP_TYPE_NONE;
+import static com.baidu.mapapi.map.BaiduMap.MAP_TYPE_NORMAL;
+import static com.baidu.mapapi.map.BaiduMap.MAP_TYPE_SATELLITE;
+
 public class Map_Bottom extends Fragment {
+    private RadioGroup mGroup;
+    private ImageButton ib_loc;
     private BaiduMap mBaiduMap;
     private MapView mMapView;
     //定位相关
@@ -38,9 +45,16 @@ public class Map_Bottom extends Fragment {
         mMapView = view.findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
         mBaiduMap.setMyLocationEnabled(true);
-        //定位
+
+        ib_loc = view.findViewById(R.id.ib_loc);
+        mGroup = view.findViewById(R.id.mGroup);
+        //初始化相关按钮以及定位配置
+        initBtn();
         initLocation();
-        ImageButton ib_loc = view.findViewById(R.id.ib_loc);
+        //初始化按钮
+        return view;
+    }
+    private void initBtn(){
         ib_loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +62,27 @@ public class Map_Bottom extends Fragment {
                 showInfo("返回自己位置");
             }
         });
-        return view;
+        mGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.map_btn_1:
+                        mBaiduMap.setMapType(MAP_TYPE_NORMAL);
+                        mBaiduMap.setTrafficEnabled(false);
+                        break;
+                    case R.id.map_btn_2:
+                        mBaiduMap.setMapType(MAP_TYPE_SATELLITE);
+                        mBaiduMap.setTrafficEnabled(false);
+                        break;
+                    case R.id.map_btn_3:
+                        mBaiduMap.setTrafficEnabled(true);
+                        break;
+                    case R.id.map_btn_4:
+                        mBaiduMap.setMapType(MAP_TYPE_NONE);
+                        break;
+                }
+            }
+        });
     }
     private void initLocation() {
         //定位客户端的设置

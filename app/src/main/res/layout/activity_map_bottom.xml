@@ -4,7 +4,44 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
+    <RadioGroup
+        android:id="@+id/mGroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/map_btn_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="普通地图"
+            android:textSize="14sp"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/map_btn_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="卫星地图"
+            android:textSize="14sp"/>
+        <RadioButton
+            android:id="@+id/map_btn_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="路况图"
+            android:textSize="14sp"/>
+        <RadioButton
+            android:id="@+id/map_btn_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="空白地图"
+            android:textSize="14sp"/>
+    </RadioGroup>
+
     <com.baidu.mapapi.map.MapView
+        android:layout_below="@+id/mGroup"
         android:id="@+id/bmapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,10 +49,11 @@
 
     <ImageButton
         android:id="@+id/ib_loc"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="520dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="600dp"
         android:layout_marginLeft="20dp"
         android:background="@drawable/loc" />
+
 
 </RelativeLayout>
