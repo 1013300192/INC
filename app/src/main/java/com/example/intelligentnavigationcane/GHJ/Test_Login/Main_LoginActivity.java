@@ -19,7 +19,7 @@ import com.example.intelligentnavigationcane.connect;
 
 import java.sql.SQLException;
 
-public class Main_LoginActivity extends AppCompatActivity {
+public class Main_LoginActivity extends CheckPermissionsActivity {
     public static int conn_on=0;//用于判断连接是否成功
     public static String password_receive;//用于接收数据库查询的返回数据
     @Override
