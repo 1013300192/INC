@@ -46,16 +46,17 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="DC9yE1eoyjDLnFK5ssxMcVgy392OjY08"/>
 
-        <activity android:name=".GHJ.Test_Login.Main_LoginActivity"/>
-
-        <activity android:name=".GHJ.Test_Login.RegisterActivity" />
-        <activity android:name=".GHJ.The_First.MainActivity" >
+        <activity android:name=".GHJ.Test_Login.Main_LoginActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        </activity>
+    </activity>
+        <activity android:name=".GHJ.Test_Login.ForgetActivity"/>
+        <activity android:name=".GHJ.Test_Login.RegisterActivity" />
+        <activity android:name=".GHJ.The_First.MainActivity" />
+
     </application>
 
 </manifest>

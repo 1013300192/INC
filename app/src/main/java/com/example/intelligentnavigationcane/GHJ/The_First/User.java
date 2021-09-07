@@ -86,7 +86,7 @@ public class User extends Fragment {
         card_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"This is card_3!",Toast.LENGTH_SHORT).show();
+
             }
         });
         CardView card_4 = view.findViewById(R.id.card_4);

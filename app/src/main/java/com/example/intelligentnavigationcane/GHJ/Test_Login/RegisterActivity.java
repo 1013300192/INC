@@ -25,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     public static int conn_on= 0;//用于判断连接是否成功
     public static int re_call=2;
     public static int call=0;
-    public static String password_receive;//用于接收数据库查询的返回数据
+   // public static String password_receive;//用于接收数据库查询的返回数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         final EditText username =  findViewById(R.id.edit_Rname);//取得输入框的对象
         final EditText password =  findViewById(R.id.edit_Rpass);
+        EditText phone=findViewById(R.id.edit_Rphone);
+        EditText person_name=findViewById(R.id.edit_R_Pname);
 
 
         final Handler handler = new Handler(new Handler.Callback() {
@@ -55,9 +57,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this,"网络未连接",Toast.LENGTH_SHORT).show();
                 }
 
-
-
-                return true;
+                return false;
             }
         });
         Button Register = findViewById(R.id.btn_ready);
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
                     public void run() {
                         Message msg = new Message();
                         try {
-                            connect.insertIntoData(username.getText().toString(), password.getText().toString());//判断用户名是否存在再插入数据
+                            connect.insertIntoData(username.getText().toString(), password.getText().toString(),phone.getText().toString(),person_name.getText().toString());//判断用户名是否存在再插入数据
                         }catch (SQLException e){
                             e.printStackTrace();
                         }

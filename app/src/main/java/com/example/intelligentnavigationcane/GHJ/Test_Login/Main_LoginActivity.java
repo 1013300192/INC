@@ -1,18 +1,13 @@
 package com.example.intelligentnavigationcane.GHJ.Test_Login;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.intelligentnavigationcane.GHJ.The_First.MainActivity;
 import com.example.intelligentnavigationcane.R;
@@ -34,11 +29,21 @@ public class Main_LoginActivity extends CheckPermissionsActivity {
         final EditText username =  findViewById(R.id.edit_name);//取得输入框的对象
         final EditText password =  findViewById(R.id.edit_pass);
 
+
+
         Button Register = findViewById(R.id.btn_register);
         Register.setOnClickListener(new View.OnClickListener() {//注册
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Main_LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button forget=findViewById(R.id.btn_forget);
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Main_LoginActivity.this, ForgetActivity.class);
                 startActivity(intent);
             }
         });
