@@ -22,6 +22,9 @@
     <!-- 读取缓存数据 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:name=".YBF.DemoApplication"
         android:allowBackup="true"
@@ -43,15 +46,16 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="DC9yE1eoyjDLnFK5ssxMcVgy392OjY08"/>
 
-        <activity android:name=".GHJ.Test_Login.Main_LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".GHJ.Test_Login.Main_LoginActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".GHJ.Test_Login.RegisterActivity" />
-        <activity android:name=".GHJ.The_First.MainActivity" />
+        <activity android:name=".GHJ.The_First.MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
