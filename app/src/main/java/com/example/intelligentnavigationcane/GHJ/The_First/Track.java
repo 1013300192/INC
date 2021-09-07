@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.intelligentnavigationcane.R;
 
-public class Bottom_Activity extends Fragment {
+public class Track extends Fragment {
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.activity_bottom_,container,false);
+    public View onCreateView(@NonNull  LayoutInflater inflater, @Nullable  ViewGroup container, @Nullable  Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_track,container,false);
         return view;
     }
 }

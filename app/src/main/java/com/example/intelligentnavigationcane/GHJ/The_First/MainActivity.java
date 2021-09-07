@@ -1,7 +1,7 @@
 package com.example.intelligentnavigationcane.GHJ.The_First;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -17,8 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
     int checked = 1;
     private static final String CURRENT_FRAGMENT = "STATE_FRAGMENT_SHOW";
     private FragmentManager fragmentManager;
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{      //正常启动时调用
             fragments.add(new ShouYe_Activity());
             fragments.add(new Map_Bottom());
-            fragments.add(new User());
+            fragments.add(new Track());
             fragments.add(new User());
             showFragment();
         }
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!fragments.get(currentIndex).isAdded()){
             transaction
                     .hide(currentFragment)
-                    .add(R.id.top_frame_layout,fragments.get(currentIndex),""+currentIndex);
+                    .add(R.id.top_fragment,fragments.get(currentIndex),""+currentIndex);
         }else{
             transaction
                     .hide(currentFragment)

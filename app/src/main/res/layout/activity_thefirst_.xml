@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -7,17 +7,42 @@
     tools:context=".GHJ.The_First.MainActivity">
 
     <FrameLayout
-        android:id="@+id/top_frame_layout"
+        android:id="@+id/top_fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="29">
-    </FrameLayout>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg" />
 
-    <fragment
-        android:id="@+id/bottom_fragment"
+    <RadioGroup
+        android:id="@+id/tabs_rg"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:name="com.example.intelligentnavigationcane.GHJ.The_First.Bottom_Activity"/>
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dcdcdc"
+        android:orientation="horizontal">
 
-</LinearLayout>
+        <RadioButton
+            android:id="@+id/btn_1"
+            style="@style/Custom.TabRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_sign_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/btn_2"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/tab_record_selector"
+            android:text="导航" />
+
+        <RadioButton
+            android:id="@+id/btn_3"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/tab_contact_selector"
+            android:text="历史轨迹" />
+
+        <RadioButton
+            android:id="@+id/btn_4"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/tab_setting_selector"
+            android:text="设置" />
+    </RadioGroup>
+    </RelativeLayout>
