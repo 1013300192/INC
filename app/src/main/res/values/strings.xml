@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">INC</string>
     <string name="add">Add</string>
+    <!-- 建议检索 -->
+    <string name="in">在</string>
+    <string name="search">市内找</string>
+    <string name="defaultCity">北京</string>
+    <string name="search_poi">检索</string>
+    <!-- 字体 -->
+    <string name="PingFang_SC_Medium">PingFang-SC-Medium</string>
+    <string name="PingFangSC_Regular">PingFangSC-Regular</string>
+    <string name="PingFangSC_Semibold">PingFangSC-Semibold</string>
 </resources>
