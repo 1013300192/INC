@@ -171,7 +171,6 @@ public class ShouYe_Activity extends Fragment implements OnGetPoiSearchResultLis
         mEditTextPoi.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
                 return false;
             }
         });
@@ -249,7 +248,6 @@ public class ShouYe_Activity extends Fragment implements OnGetPoiSearchResultLis
 
     @Override
     public void onMapPoiClick(MapPoi mapPoi) {
-
 
     }
 

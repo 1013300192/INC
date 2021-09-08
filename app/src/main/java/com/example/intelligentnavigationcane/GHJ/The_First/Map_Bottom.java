@@ -72,8 +72,6 @@ public class Map_Bottom extends Fragment implements SensorEventListener {
     }
 
     private void initView() {
-        // 开启定位图层
-        mBaiduMap.setMyLocationEnabled(true);
         MyLocationConfiguration myLocationConfiguration =
                 new MyLocationConfiguration(MyLocationConfiguration.LocationMode.NORMAL, true, null);
         // 设置定位图层配置信息
